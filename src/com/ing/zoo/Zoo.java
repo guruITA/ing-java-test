@@ -120,6 +120,13 @@ public class Zoo {
         }
     }
 
+    private static String fillInCommand() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Voer uw command in: ");
+
+        return scanner.nextLine().trim();
+    }
+
     public static void main(String[] args) {
 
         Lion simba = new Lion("simba");
@@ -135,10 +142,7 @@ public class Zoo {
         animals.add(wally);
         animals.add(marty);
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Voer uw command in: ");
-
-        String input = scanner.nextLine().trim();
+        String input = fillInCommand();
 
         switch (input) {
             case HELLO:
