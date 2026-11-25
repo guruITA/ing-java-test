@@ -12,6 +12,6 @@ public class Lion extends Animal implements Carnivore{
     @Override
     public void eatMeat() {
         eatText = "nomnomnom thx mate";
-        System.out.println(eatText);
+        say(eatText);
     }
 }

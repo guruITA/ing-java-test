@@ -10,6 +10,6 @@ public class Wolf extends Animal implements Carnivore {
 
     @Override
     public void eatMeat() {
-        System.out.println("grrr nom nom");
+        say("grrr nom nom");
     }
 }

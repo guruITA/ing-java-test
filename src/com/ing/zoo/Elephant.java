@@ -11,11 +11,11 @@ public class Elephant extends Animal implements Herbivore, TrickPerformer {
 
     @Override
     public void eatLeaves() {
-        System.out.println("munch munch crunch");
+        say("munch munch crunch");
     }
 
     @Override
     public void performTrick() {
-        System.out.println("sprays water with its trunk");
+        say("sprays water with its trunk");
     }
 }

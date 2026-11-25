@@ -19,14 +19,14 @@ public class Pig extends Animal implements Herbivore, Carnivore, TrickPerformer 
     public void eatLeaves()
     {
         eatText = "munch munch oink";
-        System.out.println(eatText);
+        say(eatText);
     }
 
     @Override
     public void eatMeat()
     {
         eatText = "nomnomnom oink thx";
-        System.out.println(eatText);
+        say(eatText);
     }
 
     @Override
@@ -42,6 +42,6 @@ public class Pig extends Animal implements Herbivore, Carnivore, TrickPerformer 
         {
             trick = "runs in circles";
         }
-        System.out.println(trick);
+        say(trick);
     }
 }

@@ -35,4 +35,12 @@ public abstract class Animal {
     public String getName() {
         return name;
     }
+
+    /**
+     * only used in classes that extend animal prints the text in console can be any text
+     * @param text text that prints in console
+     */
+    protected void say(String text) {
+        System.out.println(name + ": " + text);
+    }
 }

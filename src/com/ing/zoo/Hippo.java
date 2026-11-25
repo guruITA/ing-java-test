@@ -13,6 +13,6 @@ public class Hippo extends Animal implements Herbivore {
     public void eatLeaves()
     {
         eatText = "munch munch lovely";
-        System.out.println(eatText);
+        say(eatText);
     }
 }

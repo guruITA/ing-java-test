@@ -17,7 +17,7 @@ public class Tiger extends Animal implements Carnivore, TrickPerformer {
     public void eatMeat()
     {
         eatText = "nomnomnom oink wubalubadubdub";
-        System.out.println(eatText);
+        say(eatText);
     }
 
     @Override
@@ -33,6 +33,6 @@ public class Tiger extends Animal implements Carnivore, TrickPerformer {
         {
             trick = "scratches ears";
         }
-        System.out.println(trick);
+        say(trick);
     }
 }

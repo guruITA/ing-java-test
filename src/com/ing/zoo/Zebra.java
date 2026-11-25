@@ -13,6 +13,6 @@ public class Zebra extends Animal implements Herbivore {
     public void eatLeaves()
     {
         eatText = "munch munch zank yee bra";
-        System.out.println(eatText);
+        say(eatText);
     }
 }
