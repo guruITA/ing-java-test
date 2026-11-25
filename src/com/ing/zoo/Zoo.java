@@ -8,7 +8,6 @@ import java.util.ArrayList;
 public class Zoo {
     public static void main(String[] args) {
         String[] commands = new String[]{
-                "hello",
                 "give leaves",
                 "give meat",
                 "perform trick"
@@ -31,12 +30,15 @@ public class Zoo {
         System.out.print("Voer uw command in: ");
 
         String input = scanner.nextLine().trim();
-        if (input.equals(commands[0])) {
-            for (Animal animal : animals) {
-                animal.sayHello();
-            }
-        } else {
-            System.out.println("Unknown command: " + input);
+
+        switch (input) {
+            case "hello":
+                for (Animal animal : animals) {
+                    animal.sayHello();
+                }
+                break;
+            default:
+                System.out.println("Unknown command: " + input);
         }
     }
 }
