@@ -26,4 +26,13 @@ public abstract class Animal {
     public void sayHello() {
         System.out.println("hello I am " + name + ": " + sound);
     }
+
+    /**
+     * Getter
+     * gets the name of the animal because its private and cannot be accessed directly
+     * @return name of the animal
+     */
+    public String getName() {
+        return name;
+    }
 }
