@@ -2,6 +2,7 @@ package com.ing.zoo;
 
 import com.ing.zoo.interfaces.Carnivore;
 import com.ing.zoo.interfaces.Herbivore;
+import com.ing.zoo.interfaces.TrickPerformer;
 
 import java.util.List;
 import java.util.Scanner;
@@ -91,6 +92,34 @@ public class Zoo {
         }
     }
 
+    public static void performTrick(List<Animal> animals, String name) {
+        if (name != null) {
+            boolean found = false;
+            for (Animal animal : animals) {
+                if (animal.getName().equals(name)) {
+                    if (animal instanceof TrickPerformer) {
+                        ((TrickPerformer) animal).performTrick();
+                    } else {
+                        System.out.println(animal.getName() + " cannot perform tricks");
+                    }
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                System.out.println("name: " + name + " doesn't exist");
+            }
+        } else {
+            for (Animal animal : animals) {
+                if (animal instanceof TrickPerformer) {
+                    ((TrickPerformer) animal).performTrick();
+                } else {
+                    System.out.println(animal.getName() + " cannot perform tricks");
+                }
+            }
+        }
+    }
+
     public static void main(String[] args) {
 
         Lion simba = new Lion("simba");
@@ -122,6 +151,7 @@ public class Zoo {
                 giveMeat(animals, null);
                 break;
             case PERFORM_TRICK:
+                performTrick(animals, null);
                 break;
             default:
                 if (input.startsWith(HELLO + " ")) {
@@ -133,6 +163,9 @@ public class Zoo {
                 } else if (input.startsWith(GIVE_MEAT + " ")) {
                     String name = input.substring(GIVE_MEAT.length() + 1);
                     giveMeat(animals, name);
+                } else if (input.startsWith(PERFORM_TRICK + " ")) {
+                    String name = input.substring(PERFORM_TRICK.length() + 1);
+                    performTrick(animals, name);
                 } else {
                     System.out.println("Unknown command: " + input);
                 }
