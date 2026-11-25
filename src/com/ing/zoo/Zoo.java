@@ -1,6 +1,9 @@
 package com.ing.zoo;
 
+import java.util.List;
 import java.util.Scanner;
+
+import java.util.ArrayList;
 
 public class Zoo {
     public static void main(String[] args) {
@@ -16,6 +19,13 @@ public class Zoo {
         Pig dora = new Pig("dora");
         Tiger wally = new Tiger("wally");
         Zebra marty = new Zebra("marty");
+
+        List<Animal> animals = new ArrayList<>();
+        animals.add(simba);
+        animals.add(elsa);
+        animals.add(dora);
+        animals.add(wally);
+        animals.add(marty);
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Voer uw command in: ");
