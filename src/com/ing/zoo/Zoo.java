@@ -30,11 +30,16 @@ public class Zoo {
         System.out.print("Voer uw command in: ");
 
         String input = scanner.nextLine().trim();
+        String[] parts = input.split(" ", 2);
+        String command = parts[0];
+        String name = parts.length > 1 ? parts[1] : null;
 
-        switch (input) {
+        switch (command) {
             case "hello":
                 for (Animal animal : animals) {
-                    animal.sayHello();
+                    if (animal.getName().equals(name)) {
+                        animal.sayHello();
+                    }
                 }
                 break;
             default:
