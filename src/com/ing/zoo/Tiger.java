@@ -1,23 +1,20 @@
 package com.ing.zoo;
 
+import com.ing.zoo.interfaces.Carnivore;
+
 import java.util.Random;
 
-public class Tiger {
+public class Tiger extends Animal implements Carnivore {
     public String name;
     public String helloText;
     public String eatText;
     public String trick;
 
-    public Tiger()
-    {
+    public Tiger(String name) {
+        super(name, "rraaarww");
     }
 
-    public void sayHello()
-    {
-        helloText = "rraaarww";
-        System.out.println(helloText);
-    }
-
+    @Override
     public void eatMeat()
     {
         eatText = "nomnomnom oink wubalubadubdub";
