@@ -134,6 +134,8 @@ public class Zoo {
         Pig dora = new Pig("dora");
         Tiger wally = new Tiger("wally");
         Zebra marty = new Zebra("marty");
+        Elephant dumbo = new Elephant("dumbo");
+        Wolf akela = new Wolf("akela");
 
         List<Animal> animals = new ArrayList<>();
         animals.add(simba);
@@ -141,6 +143,8 @@ public class Zoo {
         animals.add(dora);
         animals.add(wally);
         animals.add(marty);
+        animals.add(dumbo);
+        animals.add(akela);
 
         String input = fillInCommand();
 
