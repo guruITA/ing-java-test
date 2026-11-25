@@ -30,10 +30,11 @@ public class Zoo {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Voer uw command in: ");
 
-        String input = scanner.nextLine();
-        if (input.equals(commands[0] + " simba")) {
-            simba.sayHello();
-            simba.eatMeat();
+        String input = scanner.nextLine().trim();
+        if (input.equals(commands[0])) {
+            for (Animal animal : animals) {
+                animal.sayHello();
+            }
         } else {
             System.out.println("Unknown command: " + input);
         }
