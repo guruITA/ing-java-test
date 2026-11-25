@@ -44,7 +44,7 @@ public class Zoo {
                     if (animal instanceof Herbivore) {
                         ((Herbivore) animal).eatLeaves();
                     } else {
-                        System.out.println(animal.getName() + " is not a herbivore");
+                        System.out.println(animal.getName() + ": is not a herbivore");
                     }
                     found = true;
                     break;
@@ -58,7 +58,7 @@ public class Zoo {
                 if (animal instanceof Herbivore) {
                     ((Herbivore) animal).eatLeaves();
                 } else {
-                    System.out.println(animal.getName() + " is not a herbivore");
+                    System.out.println(animal.getName() + ": is not a herbivore");
                 }
             }
         }
@@ -72,7 +72,7 @@ public class Zoo {
                     if (animal instanceof Carnivore) {
                         ((Carnivore) animal).eatMeat();
                     } else {
-                        System.out.println(animal.getName() + " is not a carnivore");
+                        System.out.println(animal.getName() + ": is not a carnivore");
                     }
                     found = true;
                     break;
@@ -86,7 +86,7 @@ public class Zoo {
                 if (animal instanceof Carnivore) {
                     ((Carnivore) animal).eatMeat();
                 } else {
-                    System.out.println(animal.getName() + " is not a carnivore");
+                    System.out.println(animal.getName() + ": is not a carnivore");
                 }
             }
         }
@@ -100,7 +100,7 @@ public class Zoo {
                     if (animal instanceof TrickPerformer) {
                         ((TrickPerformer) animal).performTrick();
                     } else {
-                        System.out.println(animal.getName() + " cannot perform tricks");
+                        System.out.println(animal.getName() + ": cannot perform tricks");
                     }
                     found = true;
                     break;
@@ -114,7 +114,7 @@ public class Zoo {
                 if (animal instanceof TrickPerformer) {
                     ((TrickPerformer) animal).performTrick();
                 } else {
-                    System.out.println(animal.getName() + " cannot perform tricks");
+                    System.out.println(animal.getName() + ": cannot perform tricks");
                 }
             }
         }
