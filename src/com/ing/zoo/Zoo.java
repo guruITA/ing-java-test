@@ -37,11 +37,16 @@ public class Zoo {
         switch (command) {
             case "hello":
                 if (name != null) {
+                    boolean found = false;
                     for (Animal animal : animals) {
                         if (animal.getName().equals(name)) {
                             animal.sayHello();
+                            found = true;
                             break;
                         }
+                    }
+                    if (!found) {
+                        System.out.println("name: " + name + " doesn't exist");
                     }
                 } else {
                     for (Animal animal : animals) {
