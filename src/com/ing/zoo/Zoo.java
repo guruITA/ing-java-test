@@ -1,5 +1,6 @@
 package com.ing.zoo;
 
+import com.ing.zoo.interfaces.Carnivore;
 import com.ing.zoo.interfaces.Herbivore;
 
 import java.util.List;
@@ -62,6 +63,34 @@ public class Zoo {
         }
     }
 
+    private static void giveMeat(List<Animal> animals, String name) {
+        if (name != null) {
+            boolean found = false;
+            for (Animal animal : animals) {
+                if (animal.getName().equals(name)) {
+                    if (animal instanceof Carnivore) {
+                        ((Carnivore) animal).eatMeat();
+                    } else {
+                        System.out.println(animal.getName() + " is not a carnivore");
+                    }
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                System.out.println("name: " + name + " doesn't exist");
+            }
+        } else {
+            for (Animal animal : animals) {
+                if (animal instanceof Carnivore) {
+                    ((Carnivore) animal).eatMeat();
+                } else {
+                    System.out.println(animal.getName() + " is not a carnivore");
+                }
+            }
+        }
+    }
+
     public static void main(String[] args) {
 
         Lion simba = new Lion("simba");
@@ -90,6 +119,7 @@ public class Zoo {
                 giveLeaves(animals, null);
                 break;
             case GIVE_MEAT:
+                giveMeat(animals, null);
                 break;
             case PERFORM_TRICK:
                 break;
@@ -100,6 +130,9 @@ public class Zoo {
                 } else if (input.startsWith(GIVE_LEAVES + " ")) {
                     String name = input.substring(GIVE_LEAVES.length() + 1);
                     giveLeaves(animals, name);
+                } else if (input.startsWith(GIVE_MEAT + " ")) {
+                    String name = input.substring(GIVE_MEAT.length() + 1);
+                    giveMeat(animals, name);
                 } else {
                     System.out.println("Unknown command: " + input);
                 }
