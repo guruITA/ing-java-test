@@ -1,6 +1,5 @@
 package com.ing.zoo;
 
-import com.ing.zoo.interfaces.Carnivore;
 import com.ing.zoo.interfaces.Herbivore;
 
 public class Hippo extends Animal implements Herbivore {
